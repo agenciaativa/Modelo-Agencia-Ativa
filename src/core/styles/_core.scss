@@ -1,0 +1,369 @@
+//region Font Settings
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url("../fonts/gotham/bold/gotham.eot");
+    src: url("../fonts/gotham/bold/gotham.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/bold/gotham.woff") format("woff"), url("../fonts/gotham/bold/gotham.ttf") format("truetype"), url("../fonts/gotham/bold/gotham.svg#gotham") format("svg");
+}
+
+@font-face {
+    font-family: 'Gotham Light';
+    src: url("../fonts/gotham/light/gotham.eot");
+    src: url("../fonts/gotham/light/gotham.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/light/gotham.ttf") format("truetype"), url("../fonts/gotham/light/gotham.svg#gotham") format("svg");
+}
+
+@font-face {
+    font-family: 'Gotham Italic';
+    src: url("../fonts/gotham/italic/gotham.eot");
+    src: url("../fonts/gotham/italic/gotham.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/italic/gotham.ttf") format("truetype"), url("../fonts/gotham/italic/gotham.svg#gotham") format("svg");
+}
+//endregion
+
+//region General Settings
+/* Workaround for unwanted route changes due to empty href attributes - see http://angular-ui.github.io/bootstrap/ */
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+
+/* Remove border to delete the 1px line */
+.navbar-fixed-top {
+	border: 0;
+}
+
+/* -----------------------------------------------------------------------------
+ * General Settings
+ * -------------------------------------------------------------------------- */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: $gotham-light;
+    color: $main_color;
+}
+
+/* ----- Body Root Settings ----- */
+div[tmpl-approot] {
+    min-height: 100%;
+    position: relative;
+}
+
+p {
+    font-size: 16px;
+}
+
+section {
+	margin-bottom: 40px;
+
+	h3 {
+		font-family: $gotham-bold;
+		margin-bottom: 30px;
+	}
+
+	p {
+		text-align: justify;
+		margin-bottom: 15px;
+	}
+}
+
+
+/* ----- Newsletter ----- */
+.newsletter {
+	color: $branco;
+	padding: 80px 0;
+	font-family: $gotham-light;
+
+	h3 {
+		text-transform: uppercase;
+		margin-top: 0;
+
+		span {
+			font-family: $gotham-bold;
+		}
+	}
+
+	.input-group {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		height: 50px;
+
+		.form-control {
+			outline: none;
+			border-radius: 0;
+			height: 100%;
+			background-color: transparent;
+			border: 1px solid $branco;
+			color: $branco;
+			font-weight: bold;
+		}
+
+		.input-group-btn {
+			.btn-newsletter {
+				height:100%;
+				padding-right: 20px;
+				padding-left: 20px;
+				background-color: $branco;
+				border-radius: 0;
+				border: 2px solid $branco;
+				font-family: $gotham-bold;
+			}
+		}
+	}
+}
+
+[placeholder] {
+    /* Firefox 4 - 18 */
+    font-family: $gotham-light;
+    outline: none;
+}
+
+[placeholder]::-moz-placeholder {
+    color: $branco;
+    opacity: 1;
+    transition: opacity 250ms ease-in-out;
+}
+
+[placeholder]:focus::-moz-placeholder {
+    opacity: 0.5;
+}
+
+[placeholder]:-ms-input-placeholder {
+    color: $branco;
+    transition: opacity 250ms ease-in-out;
+}
+
+[placeholder]:focus:-ms-input-placeholder {
+    opacity: 0.5;
+}
+
+[placeholder]::-webkit-input-placeholder {
+    color: $branco;
+    transition: opacity 250ms ease-in-out;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    opacity: 0.5;
+}
+
+[placeholder] :-moz-placeholder {
+    color: $branco;
+    opacity: 1;
+    transition: opacity 250ms ease-in-out;
+}
+
+[placeholder] :focus:-moz-placeholder {
+    opacity: 0.5;
+}
+
+//endregion
+
+//region Conteúdo
+/* -----------------------------------------------------------------------------
+ * Content
+ * -------------------------------------------------------------------------- */
+
+//region BREADCRUMBS
+
+/* ----- BREADCRUMBS -----*/
+#breadcrumbs {
+	background: url('/images/bg_breadcrumbs.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	margin-bottom:0;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-shadow: 1px 1px $preto;
+
+	.page-title {
+		h2 {
+			font-family: $gotham-bold;
+			margin:0;
+
+			small {
+				color: $branco;
+			}
+		}
+	}
+
+	.breadcrumb-nav {
+		text-align: right;
+		font-weight: bold;
+
+		a {
+			font-size: 16px;
+
+			&:link,
+			&:active,
+			&:visited {
+				text-decoration: none;
+			}
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+
+	.page-title h2,
+	.breadcrumb-nav span {
+		line-height: 40px;
+	}
+
+	&,
+	.breadcrumb-nav a {
+		color: $branco;
+	}
+}
+
+//endregion
+
+//region PÁGINA HOME
+
+/* ----- HOME ----- */
+div[tmpl-home] {
+	section {
+		margin-bottom: 0;
+	}
+}
+
+#sobre {
+	padding-top: 80px;
+	padding-bottom:80px;
+}
+
+//endregion
+
+//region PÁGINA CONTATO
+div[tmpl-contato] section {
+	margin-bottom: 0;
+}
+
+#contato {
+	padding-bottom:0;
+
+	h3 {
+		padding-right: 15px;
+		font-family: $gotham-light;
+		margin: 0 0 30px;
+	}
+
+	h4 {
+		margin: 0 0 10px;
+	}
+
+	h3,
+	h4 {
+		line-height: 1;
+
+		&,
+		span {
+			text-transform: uppercase;
+		}
+
+		span {
+			font-family: $gotham-bold;
+		}
+	}
+
+	.form-container {
+		padding: 50px 0;
+		margin:0;
+
+		h3 {
+			font-family: $gotham-bold;
+		}
+
+		.form-group {
+			label {
+				//color: $color_header_link_hover;
+			}
+
+			textarea {
+				resize: none;
+				height: 200px;
+			}
+
+			input,
+			textarea {
+				-webkit-border-radius: 0;
+				-moz-border-radius: 0;
+				border-radius: 0;
+				border: none;
+				//background-color: $background_color_input_form;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+				text-transform: uppercase;
+			}
+
+			input {
+				height: 45px;
+			}
+		}
+
+		.btn-enviar {
+			//background-color: $color_header_link_hover;
+			padding: 20px 35px;
+			width: 200px;
+			color: $branco;
+			font-size: 14px;
+			font-family: $gotham-bold;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+		}
+	}
+
+	.endereco {
+		//background-color: $background_color_endereco;
+		padding: 30px 20px 20px;
+		font-family: $gotham-bold;
+		text-transform: uppercase;
+
+		h4,
+		h6 {
+			color: $branco;
+		}
+	}
+}
+
+//endregion
+
+//endregion
+
+//region Responsive Settings
+/* -----------------------------------------------------------------------------
+ * Responsive
+ * -------------------------------------------------------------------------- */
+
+//region MAX-WIDTH 767px
+@media (max-width: 767px) {
+
+}
+//endregion
+
+//region MIN-WIDTH 768px
+@media (min-width: 768px) {
+
+}
+//endregion
+
+//region MIN-WIDTH 768px AND MAX-WIDTH 991px
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+//endregion
+
+//region MIN-WIDTH 992px
+@media (min-width: 992px) {
+
+}
+//endregion
+
+//region MIN-WIDTH 1200px
+@media (min-width: 1200px) {
+
+}
+//endregion
+
+//endregion
